@@ -1,0 +1,107 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
+}
+
+body, p, h1, h2 {
+  margin: 0;
+}
+
+.navbar__logo {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.footer__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.footer__containerLink {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.footer__containerLink--medTxt {
+  font-weight: 500;
+}
+
+.location__city {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.purpose__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.purpose__txt {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+.purpose__button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.how__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.how__stepTxt {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.restaurant__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.restaurant__shopTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.restaurant__shopTxt {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar {
+  height: 63px;
+  border: 2px #b32424 solid;
+}
+.location {
+  height: 50px;
+  border: 2px #b32424 solid;
+}
+
+.purpose__title {
+  margin: 40px 72px 18px 72px;
+}
+.purpose__txt {
+  margin: 0px 29px 27px 29px;
+}
+.purpose__button {
+  margin-bottom: 57px;
+}

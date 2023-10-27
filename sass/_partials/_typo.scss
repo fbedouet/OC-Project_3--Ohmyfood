@@ -1,0 +1,59 @@
+//Header
+.navbar{
+    &__logo{
+        @include ds_txt-var($ft-logo,$sz_ft-30px,$wgt_ft-regular);
+    }
+}
+//Footer
+.footer {
+    &__title{
+        @include ds_txt-var($ft-logo,$sz_ft-18px,$wgt_ft-regular);
+    }
+    &__containerLink{
+        @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-regular);
+    }
+    &__containerLink--medTxt{
+        font-weight: $wgt_ft-medium;
+    }
+}
+
+//Main page (index.html)
+.location{
+    &__city{
+       @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-medium);
+    }
+}
+
+.purpose{
+    &__title{
+        @include ds_txt-title;
+    }
+    &__txt{
+        @include ds_txt-var($ft-txt,$sz_ft-18px,$wgt_ft-light);
+    }
+    &__button{
+        @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-medium);
+    }
+}
+
+.how{
+    &__title{
+        @include ds_txt-title;
+    }
+    &__stepTxt{
+        @include ds_txt-howStep;
+    }
+}
+
+.restaurant {
+    &__title{
+        @include ds_txt-title;
+    }
+    &__shopTitle{
+        @include ds_txt-subTitle;
+    }
+    &__shopTxt{
+        @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-light);
+    }
+}
+

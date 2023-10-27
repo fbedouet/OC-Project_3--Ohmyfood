@@ -1,0 +1,30 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.navbar{
+    height: 63px;
+    border:2px #b32424 solid;
+    &__logo{
+    }
+}
+
+.location{
+    height: 50px;
+    border:2px #b32424 solid;
+}
+
+.purpose{
+    &__title{
+        margin: 40px 72px 18px 72px;
+    }
+    &__txt{
+        margin: 0px 29px 27px 29px;
+    }
+    &__button{
+        margin-bottom: 57px;
+    }
+
+}

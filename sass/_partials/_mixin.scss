@@ -1,0 +1,27 @@
+//typo main page (index.html
+@mixin ds_txt-title {
+    font-family: $ft-txt;
+    font-size: $sz_ft-24px;
+    font-weight: $wgt_ft-bold;
+}
+
+@mixin ds_txt-subTitle {
+    font-family: $ft-txt;
+    font-size: $sz_ft-18px;
+    font-weight: $wgt_ft-bold;
+}
+
+@mixin ds_txt-howStep {
+    font-family: $ft-txt;
+    font-size: $sz_ft-16px;
+    font-weight: $wgt_ft-medium;
+}
+
+//typo all page
+@mixin ds_txt-var($font,$size,$weight){
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+
