@@ -9,10 +9,10 @@
     &__title{
         @include ds_txt-var($ft-logo,$sz_ft-18px,$wgt_ft-regular);
     }
-    &__containerLink{
+    &__boxLink{
         @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-regular);
     }
-    &__containerLink--medTxt{
+    &__boxLink--medTxt{
         font-weight: $wgt_ft-medium;
     }
 }
@@ -40,8 +40,13 @@
     &__title{
         @include ds_txt-title;
     }
-    &__stepTxt{
-        @include ds_txt-howStep;
+    &__step {
+        &Index{
+            @include ds_txt-var($ft-txt,14.18px,$wgt_ft-medium);    
+        }
+        &Txt{
+            @include ds_txt-howStep;
+        }
     }
 }
 
@@ -49,10 +54,15 @@
     &__title{
         @include ds_txt-title;
     }
-    &__shopTitle{
+    &__boxShop{
+        &Newtxt{
+            @include ds_txt-var($ft-txt,$sz_ft-14px,$wgt_ft-medium);
+        }
+    }
+    &__boxShopTxtTitle{
         @include ds_txt-subTitle;
     }
-    &__shopTxt{
+    &__boxShopTxt{
         @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-light);
     }
 }

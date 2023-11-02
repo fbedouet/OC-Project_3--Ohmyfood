@@ -1,30 +1,160 @@
-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-}
-
 .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 63px;
-    border:2px #b32424 solid;
-    &__logo{
+    &__goback {
+        width: 33%;
+        padding-left: 23px;
+        &--display {
+            display: none;
+        }
     }
 }
 
 .location{
+    display: flex;
     height: 50px;
-    border:2px #b32424 solid;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    background-color: $cl_bkg-txt_location;
+    &__icon{
+        margin-right: 17px ;
+    }
 }
 
 .purpose{
+    display: grid;
+    justify-items: center;
+    background-color: $cl_bg-purpose;
+
     &__title{
-        margin: 40px 72px 18px 72px;
+        margin: 39px 50px 0px 50px;
+        text-align: center;
+        height: 68px;
     }
     &__txt{
-        margin: 0px 29px 27px 29px;
+        margin-bottom: 30px;
+        text-align: center;
     }
     &__button{
         margin-bottom: 57px;
+        @include ds_button;
     }
 
+}
+
+.how {
+    display:flex;
+    flex-direction: column;
+    gap: 25px;
+    padding:48px 19px;
+    &__step{
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: $cl_bg-purpose;
+        box-shadow: $shadows-light;
+        border-radius: 20px;
+        height: 72.38px;
+        margin-left: 12px;
+        &Index{
+            position: absolute;
+            left: -12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $clr-purple;
+            height: 24px;
+            width: 24px;
+            border-radius: 12px;
+            color: $cl_txt-button;
+        }
+        &Icon{
+            position: relative;
+            top: -3px;
+            padding-left: 32px;
+        }
+        &Txt{
+            margin-left: 27px;
+        }
+    }
+}
+
+.restaurant {
+    padding:48px 19px;
+    background-color: $cl_bg-purpose;
+    &__box{
+        display: grid;
+        row-gap: 18px;
+        &Shop{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-auto-rows: minmax(77px,auto);
+            grid-template-areas: "img img"
+                                 "txt like";
+            position: relative;
+            &Img{
+                grid-area: img;
+                width: 100%;
+                height: 174px;
+                object-fit: cover;
+                border-radius:15px 15px 0px 0px;
+            }
+            &Newtxt{
+                position: absolute;
+                right: 12px;
+                top: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $clr-green;
+                background-color: $clr-waterGreen;
+                width: 80px;
+                height: 29px;
+                border-radius: 2px;
+            }
+            &Txt{
+                grid-area: txt;
+                display:grid;
+                background-color: $cl_txt-button;
+                row-gap: 5px;
+                border-bottom-left-radius: 15px;
+                padding-left: 13px;
+                &Title{
+                    align-self:end ;
+                }
+            }
+            &Like{
+                grid-area: like;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-right: 13px;
+                border-bottom-right-radius: 15px;
+                background-color: $cl_txt-button;
+            }
+        }
+    }
+}
+
+.footer {    
+    background-color: $cl_bg-footer;
+    color: $cl_txt-button;
+    padding: 22px 19px;
+    display: grid;
+    row-gap: 6px;
+    &__title{
+        margin-bottom: 10px;
+    }
+    &__box{
+        display: grid;
+        row-gap: 6px;
+        &Link{
+            &:visited{
+                color: $cl_txt-button;
+            }
+        }
+    }
 }

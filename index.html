@@ -13,8 +13,9 @@
     </head>
     <body>
         <header class="navbar">
-            <!--<nav class="navbar__backward"></nav>-->
+            <div class="navbar__goback"><img src="assets/logo/GoBack.svg" class="navbar__goback--display"></div>
             <p class="navbar__logo">ohmyfood</p>
+            <div class="navbar__goback"></div>
         </header>
         <main>
             <div class="location"> <i class="fa-solid fa-location-dot location__icon"></i> <span class="location__city">Paris, Belleville</span> </div>
@@ -25,49 +26,78 @@
             </section>
             <section class="how">
                 <h1 class="how__title">Fonctionnement</h1>
-                <div class="how__step"> <i class="fa-solid fa-mobile-screen-button how__stepIcon"></i> <span class="how__stepTxt">Choisissez un restaurant</span> </div> <span>1</span> 
-                <div class="how__step"> <i class="fa-solid fa-list-ul how__stepIcon"></i> <span class="how__stepTxt">Composez votre menu</span> </div> <span>2</span>
-                <div class="how__step"> <i class="fa-solid fa-store how__stepIcon"></i> <span class="how__stepTxt">Dégustez au restaurant</span> </div> <span>3</span>
+                <div class="how__step">
+                    <span class="how__stepIndex">1</span>
+                    <i class="fa-lg fa-solid fa-mobile-screen-button how__stepIcon"></i>
+                    <span class="how__stepTxt">Choisissez un restaurant</span>
+                </div>
+                <div class="how__step">
+                    <span class="how__stepIndex">2</span>
+                    <i class="fa-solid fa-list-ul how__stepIcon"></i>
+                    <span class="how__stepTxt">Composez votre menu</span>
+                </div>
+                <div class="how__step">
+                    <span class="how__stepIndex">3</span>
+                    <i class="fa-solid fa-store how__stepIcon"></i>
+                    <span class="how__stepTxt">Dégustez au restaurant</span>
+                </div>
             </section>
             <section class="restaurant">
                 <h1 class="restaurant__title">Restaurant</h1>
-                <div class="restaurant__container">
-                    <article class="restaurant__shop">
-                        <p class="restaurant__shopImg">Photos</p>
-                        <h2 class="restaurant__shopTitle">La palette du goût</h2>
-                        <p class="restaurant__shopTxt">Ménilmontant</p>
-                        <p class="restaurant__shopLike">J'aime</p>
+                <div class="restaurant__box">
+                    <article class="restaurant__boxShop">
+                        <img src="assets/img/jay-wennington-lPdG.jpg" class="restaurant__boxShopImg" alt="Assiette gastronomique avec saumon roquette friand"> 
+                        <span class="restaurant__boxShopNewtxt">Nouveau</span>
+                        <div class="restaurant__boxShopTxt">
+                            <h2 class="restaurant__boxShopTxtTitle">La palette du goût</h2>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="restaurant__boxShopLike">
+                            <img src="assets/logo/Like.svg" alt="Like off">
+                        </div>
                     </article>
-                    <article class="restaurant__shop">
-                        <p class="restaurant__shopImg">Photos</p>
-                        <h2 class="restaurant__shopTitle">La note enchantée</h2>
-                        <p class="restaurant__shopTxt">Charonne</p>
-                        <p class="restaurant__shopLike">J'aime</p>
+                    <article class="restaurant__boxShop">
+                        <img src="assets/img/stil-lNE.jpg" class="restaurant__boxShopImg" alt="Assiette gourmande légumes">
+                        <div class="restaurant__boxShopTxt">
+                            <h2 class="restaurant__boxShopTxtTitle">La note enchantée</h2>
+                            <p>Charonne</p>
+                        </div>
+                        <div class="restaurant__boxShopLike">
+                            <img src="assets/logo/Like.svg" alt="Like off">
+                        </div>
                     </article>
-                    <article class="restaurant__shop">
-                        <p class="restaurant__shopImg">Photos</p>
-                        <h2 class="restaurant__shopTitle">À la française</h2>
-                        <p class="restaurant__shopTxt">Cité Rouge</p>
-                        <p class="restaurant__shopLike">J'aime</p>
+                    <article class="restaurant__boxShop">
+                        <img src="assets/img/toa-heftiba-alF.jpg" class="restaurant__boxShopImg" alt="Assiette toast salade oeuf poché sauce">
+                        <div class="restaurant__boxShopTxt">
+                            <h2 class="restaurant__boxShopTxtTitle">À la française</h2>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <div class="restaurant__boxShopLike">
+                            <img src="assets/logo/Like.svg" alt="Like off">
+                        </div>
                     </article>
-                    <article class="restaurant__shop">
-                        <p class="restaurant__shopImg">Photos</p>
-                        <h2 class="restaurant__shopTitle">Le délice des sens</h2>
-                        <p class="restaurant__shopTxt">Folie-Méricourt</p>
-                        <p class="restaurant__shopLike">J'aime</p>
+                    <article class="restaurant__boxShop">
+                        <img src="assets/img/louis-hansel-shotsoflouis-lDdS.jpg" class="restaurant__boxShopImg" alt="Assiette rectangulaire poisson poivrons">
+                        <div class="restaurant__boxShopTxt">
+                            <h2 class="restaurant__boxShopTxtTitle">Le délice des sens</h2>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <div class="restaurant__boxShopLike">
+                            <img src="assets/logo/Like.svg" alt="Like off">
+                        </div>
                     </article>
                 </div>
             </section>
         </main>
             <footer class="footer">
                 <div class="footer__title">ohmyfood</div>
-                <div class="footer__container">
-                    <a href="#" class="footer__containerLink footer__containerLink--medTxt"><i class="fa-solid fa-utensils footer__containerIcon"></i>Proposer un restaurant</a>
-                    <a href="#" class="footer__containerLink footer__containerLink--medTxt"><i class="fa-solid fa-handshake-angle footer__partnerIcon"></i>Devenir partenaire</a>
+                <div class="footer__box">
+                    <a href="#" class="footer__boxLink footer__boxLink--medTxt"><i class="fa-solid fa-utensils footer__boxPurposeIcon"></i>Proposer un restaurant</a>
+                    <a href="#" class="footer__boxLink footer__boxLink--medTxt"><i class="fa-solid fa-handshake-angle footer__boxPartnerIcon"></i>Devenir partenaire</a>
                 </div>
-                <div class="footer__container">
-                    <a href="#" class="footer__containerLink">Mentions légales</a>
-                    <a href="#" class="footer__containerLink">Contact</a>
+                <div class="footer__box">
+                    <a href="#" class="footer__boxLink">Mentions légales</a>
+                    <a href="#" class="footer__boxLink">Contact</a>
                 </div>
             </footer>
     </body>

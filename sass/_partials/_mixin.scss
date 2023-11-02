@@ -24,4 +24,13 @@
     font-weight: $weight;
 }
 
-
+//design system button
+@mixin ds_button {
+    height: 50px;
+    border-radius: 25px;
+    border-style: none;
+    padding: 0 22px;
+    color:$cl_txt-button;
+    background: linear-gradient(to bottom right, $clr-pink, $clr-purple);
+    box-shadow: $shadows;
+}
