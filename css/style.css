@@ -148,6 +148,30 @@ body, p, h1, h2 {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+.purpose__button:hover {
+  cursor: pointer;
+}
+.purpose__button:hover::after {
+  opacity: 1;
+}
+.purpose__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
 }
 
 .how {
@@ -271,6 +295,28 @@ body, p, h1, h2 {
   padding-right: 13px;
   border-bottom-right-radius: 15px;
   background-color: #ffffff;
+  z-index: 1;
+}
+.restaurant__boxShopLikeOff {
+  position: relative;
+}
+.restaurant__boxShopLikeOff:hover {
+  cursor: pointer;
+}
+.restaurant__boxShopLikeOff:hover .restaurant__boxShopLikeOn {
+  opacity: 1;
+  z-index: 2;
+}
+.restaurant__boxShopLikeOn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 
 .footer {

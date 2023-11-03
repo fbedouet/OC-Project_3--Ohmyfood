@@ -33,4 +33,28 @@
     color:$cl_txt-button;
     background: linear-gradient(to bottom right, $clr-pink, $clr-purple);
     box-shadow: $shadows;
+
+    position: relative;
+    z-index: 1;
+
+    &:hover{
+        cursor: pointer;
+        &::after{
+            opacity: 1;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        background-color: rgba($color: white, $alpha: 0.1);
+        border-radius: 25px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        box-shadow: $shadows_hover;
+    }
 }

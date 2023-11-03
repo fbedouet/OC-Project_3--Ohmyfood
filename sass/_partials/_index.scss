@@ -134,6 +134,27 @@
                 padding-right: 13px;
                 border-bottom-right-radius: 15px;
                 background-color: $cl_txt-button;
+                z-index: 1;
+                &Off{
+                    position: relative;
+                    &:hover{
+                        cursor: pointer;
+                        & .restaurant__boxShopLikeOn{
+                           opacity: 1;
+                           z-index: 2;
+                        }
+                    }
+                }
+                &On{
+                    position: absolute;
+                    top:0;
+                    bottom: 0;
+                    right: 0;
+                    left:0;
+                    opacity: 0;
+                    z-index: -1;
+                    transition: opacity 250ms;
+                }
             }
         }
     }
