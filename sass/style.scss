@@ -1,6 +1,9 @@
-@import '_partials/init';
 @import '_partials/variable';
+@import '_partials/init';
 @import '_partials/mixin';
 @import '_partials/typo';
 
-@import '_partials/index';
+@import '_partials/_modules/__navbar';
+@import '_partials/_modules/_index';
+@import '_partials/_modules/_rest_lPdG';
+@import '_partials/_modules/footer';

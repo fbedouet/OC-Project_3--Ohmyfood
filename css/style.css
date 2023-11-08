@@ -1,9 +1,19 @@
 a {
   text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
 }
 
-body, p, h1, h2 {
+body, p, h1, h2, h3 {
   margin: 0;
+}
+
+body, main, footer {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
 }
 
 .navbar__logo {
@@ -17,12 +27,16 @@ body, p, h1, h2 {
   font-size: 1.125rem;
   font-weight: 400;
 }
-.footer__boxLink {
+.footer__box1Link, .footer__box2Link {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;
 }
-.footer__boxLink--medTxt {
+.footer__box1LinkIcon, .footer__box2LinkIcon {
+  width: 12px;
+  height: 13px;
+}
+.footer__box1Link--medTxt, .footer__box2Link--medTxt {
   font-weight: 500;
 }
 
@@ -53,12 +67,12 @@ body, p, h1, h2 {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.how__stepIndex {
+.how__box .howStepIndex {
   font-family: "Roboto", sans-serif;
   font-size: 14.18px;
   font-weight: 500;
 }
-.how__stepTxt {
+.how__box .howStepTxt {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -85,6 +99,37 @@ body, p, h1, h2 {
   font-weight: 300;
 }
 
+.cardMenu__boxTitle {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.cardMenu__choiceTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.cardMenu__choiceDishTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.cardMenu__choiceDishBoxObs {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 300;
+}
+.cardMenu__choiceDishBoxPrice {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+.cardMenu__button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,8 +146,11 @@ body, p, h1, h2 {
   width: 33%;
   padding-left: 23px;
 }
-.navbar__goback--display {
+.navbar__goback--displayoff {
   display: none;
+}
+.navbar__goback--displayon {
+  cursor: pointer;
 }
 
 .location {
@@ -185,7 +233,33 @@ body, p, h1, h2 {
   gap: 25px;
   padding: 48px 19px;
 }
-.how__step {
+@media (min-width: 1440px) {
+  .how {
+    padding-left: 180px;
+  }
+}
+.how__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 1440px) {
+  .how__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.how__boxStep {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,8 +273,9 @@ body, p, h1, h2 {
   border-radius: 20px;
   height: 72.38px;
   margin-left: 12px;
+  width: 325px;
 }
-.how__stepIndex {
+.how__boxStepIndex {
   position: absolute;
   left: -12px;
   display: -webkit-box;
@@ -218,12 +293,12 @@ body, p, h1, h2 {
   border-radius: 12px;
   color: #ffffff;
 }
-.how__stepIcon {
+.how__boxStepIcon {
   position: relative;
   top: -3px;
   padding-left: 32px;
 }
-.how__stepTxt {
+.how__boxStepTxt {
   margin-left: 27px;
 }
 
@@ -231,9 +306,26 @@ body, p, h1, h2 {
   padding: 48px 19px;
   background-color: #F6F6F6;
 }
+@media (min-width: 1439px) {
+  .restaurant {
+    padding: 30px 180px;
+  }
+}
+.restaurant__title {
+  margin-bottom: 25px;
+}
 .restaurant__box {
   display: grid;
   row-gap: 18px;
+}
+@media (min-width: 1439px) {
+  .restaurant__box {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    -webkit-column-gap: 100px;
+       -moz-column-gap: 100px;
+            column-gap: 100px;
+  }
 }
 .restaurant__boxShop {
   display: grid;
@@ -295,19 +387,25 @@ body, p, h1, h2 {
   padding-right: 13px;
   border-bottom-right-radius: 15px;
   background-color: #ffffff;
-  z-index: 1;
 }
 .restaurant__boxShopLikeOff {
   position: relative;
+  z-index: 1;
+  width: 23px;
+  height: 21px;
+  background-image: url(../assets/logo/Like.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .restaurant__boxShopLikeOff:hover {
   cursor: pointer;
 }
-.restaurant__boxShopLikeOff:hover .restaurant__boxShopLikeOn {
+.restaurant__boxShopLikeOff:hover::after {
   opacity: 1;
   z-index: 2;
 }
-.restaurant__boxShopLikeOn {
+.restaurant__boxShopLikeOff::after {
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -315,8 +413,153 @@ body, p, h1, h2 {
   left: 0;
   opacity: 0;
   z-index: -1;
+  background-image: url(../assets/logo/Like_fill.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-transition: opacity 250ms;
   transition: opacity 250ms;
+}
+
+.cardCover {
+  position: relative;
+  height: 221px;
+  z-index: -1;
+}
+.cardCover__img {
+  position: absolute;
+  height: 275px;
+}
+.cardMenu {
+  z-index: 1;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+  padding: 0px 13px;
+  padding-bottom: 40px;
+}
+.cardMenu__box {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cardMenu__boxLike {
+  padding-left: 30px;
+}
+.cardMenu__boxLikeAnim {
+  position: relative;
+  z-index: 1;
+  width: 23px;
+  height: 21px;
+  background-image: url(../assets/logo/Like.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cardMenu__boxLikeAnim:hover {
+  cursor: pointer;
+}
+.cardMenu__boxLikeAnim:hover::after {
+  opacity: 1;
+  z-index: 2;
+}
+.cardMenu__boxLikeAnim::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  background-image: url(../assets/logo/Like_fill.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+.cardMenu__choice {
+  display: grid;
+  row-gap: 12px;
+  margin-top: 40px;
+}
+.cardMenu__choiceDish {
+  background-color: white;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 72px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  padding: 0 15px;
+}
+.cardMenu__choiceDishBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cardMenu__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F6F6F6;
+  height: 50px;
+  width: 186px;
+  margin: auto;
+  margin-top: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  border-radius: 25px;
+  border-style: none;
+  padding: 0 22px;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+.cardMenu__button:hover {
+  cursor: pointer;
+}
+.cardMenu__button:hover::after {
+  opacity: 1;
+}
+.cardMenu__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
@@ -324,15 +567,61 @@ body, p, h1, h2 {
   color: #ffffff;
   padding: 22px 19px;
   display: grid;
-  row-gap: 6px;
+}
+@media (min-width: 1439px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-item-align: center;
+        align-self: center;
+    height: 114px;
+    width: 1310px;
+    gap: 90px;
+    padding: 31px 65px;
+  }
 }
 .footer__title {
   margin-bottom: 10px;
 }
-.footer__box {
+@media (min-width: 1439px) {
+  .footer__title {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1439px) {
+  .footer__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 45px;
+  }
+}
+.footer__box1, .footer__box2 {
   display: grid;
   row-gap: 6px;
 }
-.footer__boxLink:visited {
+@media (min-width: 1439px) {
+  .footer__box1, .footer__box2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+  }
+}
+.footer__box1Link, .footer__box2Link {
+  color: white;
+}
+.footer__box1Link:visited, .footer__box2Link:visited {
   color: #ffffff;
+}
+.footer__box1LinkIcon, .footer__box2LinkIcon {
+  margin-right: 11px;
 }

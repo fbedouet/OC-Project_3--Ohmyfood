@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    &__goback {
+        width: 33%;
+        padding-left: 23px;
+        &--displayoff {
+            display: none;
+        }
+        &--displayon {
+            cursor: pointer;
+        }
+        
+    }
+}

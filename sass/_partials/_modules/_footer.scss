@@ -1,0 +1,48 @@
+.footer {    
+    background-color: $cl_bg-footer;
+    color: $cl_txt-button;
+    padding: 22px 19px;
+    display: grid;
+    @media (min-width: 1439px){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        align-self: center;
+        height: 114px;
+        width: 1310px;
+        gap:90px;
+        padding: 31px 65px
+    }
+
+    &__title{
+        margin-bottom: 10px;
+        @media (min-width: 1439px){
+            margin-bottom: 0;
+        }
+    }
+    &__box{
+        @media (min-width: 1439px){
+            display: flex;
+            gap:45px;
+        }
+
+        &1, &2{
+            display: grid;
+            row-gap: 6px;
+            @media (min-width: 1439px){
+                display: flex;
+                gap:16px;
+            }
+
+            &Link{
+                color: $cl_txt-footer;
+                &:visited{
+                    color: $cl_txt-button;
+                }
+                &Icon {
+                    margin-right:11px ;
+                }
+            }
+        }
+    }
+}

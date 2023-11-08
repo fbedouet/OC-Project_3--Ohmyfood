@@ -9,12 +9,19 @@
     &__title{
         @include ds_txt-var($ft-logo,$sz_ft-18px,$wgt_ft-regular);
     }
-    &__boxLink{
-        @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-regular);
+    &__box1 , &__box2{
+        &Link{
+            @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-regular);
+            &Icon{
+                width: 12px;
+                height: 13px;
+            }
+        }
+        &Link--medTxt{
+            font-weight: $wgt_ft-medium;
+        }
     }
-    &__boxLink--medTxt{
-        font-weight: $wgt_ft-medium;
-    }
+
 }
 
 //Main page (index.html)
@@ -40,14 +47,15 @@
     &__title{
         @include ds_txt-title;
     }
-    &__step {
-        &Index{
-            @include ds_txt-var($ft-txt,14.18px,$wgt_ft-medium);    
+    &__box
+        &Step {
+            &Index{
+                @include ds_txt-var($ft-txt,14.18px,$wgt_ft-medium);    
+            }
+            &Txt{
+                @include ds_txt-howStep;
+            }
         }
-        &Txt{
-            @include ds_txt-howStep;
-        }
-    }
 }
 
 .restaurant {
@@ -67,3 +75,44 @@
     }
 }
 
+//Restaurants page (rest_*.html)
+.card{
+
+    &Menu{
+
+        &__box {
+            &Title{
+                @include ds_txt-var($ft-logo,$sz_ft-28px,$wgt_ft-regular); 
+            }
+        }
+
+        &__choice{
+
+            &Title{
+                @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-light);
+            }
+
+            &Dish{
+
+                &Title{
+                    @include ds_txt-var($ft-txt,$sz_ft-18px,$wgt_ft-medium); 
+                }
+
+                &Box{
+                    &Obs{
+                        @include ds_txt-var($ft-txt,$sz_ft-15px,$wgt_ft-light);
+                    }
+
+                    &Price {
+                        @include ds_txt-var($ft-txt,$sz_ft-15px,$wgt_ft-bold);
+                    }
+                }
+
+            }
+        }
+
+        &__button {
+            @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-medium);
+        }
+    }
+}

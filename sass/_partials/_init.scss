@@ -1,7 +1,17 @@
 a {
     text-decoration: none;
+    color:$cl_txt-default;
+    &:visited{
+        color: $cl_txt-default;
+    }
 }
 
-body,p, h1,h2 {
+body,p, h1,h2,h3 {
     margin: 0;
+}
+
+body, main, footer {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
 }

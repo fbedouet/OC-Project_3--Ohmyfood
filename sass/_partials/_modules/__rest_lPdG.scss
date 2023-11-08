@@ -1,0 +1,67 @@
+.card{
+    &Cover{
+        position: relative;
+        height: 221px;
+        z-index: -1;
+        &__img{
+            position: absolute;
+            height: 275px;
+        }
+    }
+
+    &Menu{
+        z-index: 1;
+        background-color: $cl_bg-purpose;
+        border-radius:40px 40px 0px 0px;
+        padding: 0px 13px;
+        padding-bottom: 40px;
+
+        &__box {
+            padding-top:40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &Like{
+                padding-left: 30px;
+                &Anim{
+                    @include ds_like;
+                }
+            }
+        }
+
+        &__choice{
+            display: grid;
+            row-gap: 12px;
+            margin-top: 40px;
+            
+            &Dish{
+                background-color: $cl_bkg-white;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                height: 72px;
+                justify-content: center;
+                gap:5px;
+                padding:0 15px;
+
+                &Box{
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+            }
+        }
+
+        &__button{
+            display: flex;
+            justify-content: center;
+            background-color: $cl_bg-purpose;
+            height: 50px;
+            width: 186px;
+            margin: auto;
+            margin-top: 40px;
+            align-items: center;
+            @include ds_button;
+        }
+    }
+}
