@@ -27,16 +27,16 @@ body, main, footer {
   font-size: 1.125rem;
   font-weight: 400;
 }
-.footer__box1Link, .footer__box2Link {
+.footer__boxHalfLink {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;
 }
-.footer__box1LinkIcon, .footer__box2LinkIcon {
+.footer__boxHalfLinkIcon {
   width: 12px;
   height: 13px;
 }
-.footer__box1Link--medTxt, .footer__box2Link--medTxt {
+.footer__boxHalfLink--medTxt {
   font-weight: 500;
 }
 
@@ -317,6 +317,9 @@ body, main, footer {
 .restaurant__box {
   display: grid;
   row-gap: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 1439px) {
   .restaurant__box {
@@ -329,7 +332,7 @@ body, main, footer {
 }
 .restaurant__boxShop {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(auto, 245px));
   grid-auto-rows: minmax(77px, auto);
   grid-template-areas: "img img" "txt like";
   position: relative;
@@ -428,6 +431,9 @@ body, main, footer {
 .cardCover__img {
   position: absolute;
   height: 275px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cardMenu {
   z-index: 1;
@@ -604,24 +610,24 @@ body, main, footer {
     gap: 45px;
   }
 }
-.footer__box1, .footer__box2 {
+.footer__boxHalf {
   display: grid;
   row-gap: 6px;
 }
 @media (min-width: 1439px) {
-  .footer__box1, .footer__box2 {
+  .footer__boxHalf {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 16px;
   }
 }
-.footer__box1Link, .footer__box2Link {
+.footer__boxHalfLink {
   color: white;
 }
-.footer__box1Link:visited, .footer__box2Link:visited {
+.footer__boxHalfLink:visited {
   color: #ffffff;
 }
-.footer__box1LinkIcon, .footer__box2LinkIcon {
+.footer__boxHalfLinkIcon {
   margin-right: 11px;
 }

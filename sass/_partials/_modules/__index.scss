@@ -103,6 +103,7 @@
     &__box{
         display: grid;
         row-gap: 18px;
+        justify-content: center;
         @media (min-width: 1439px){
             grid-template-columns: 1fr 1fr;
             row-gap: 50px;
@@ -111,7 +112,7 @@
 
         &Shop{
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2,minmax(auto,245px));
             grid-auto-rows: minmax(77px,auto);
             grid-template-areas: "img img"
                                  "txt like";

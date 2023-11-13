@@ -9,16 +9,18 @@
     &__title{
         @include ds_txt-var($ft-logo,$sz_ft-18px,$wgt_ft-regular);
     }
-    &__box1 , &__box2{
-        &Link{
-            @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-regular);
-            &Icon{
-                width: 12px;
-                height: 13px;
+    &__box{
+        &Half{
+            &Link{
+                @include ds_txt-var($ft-txt,$sz_ft-16px,$wgt_ft-regular);
+                &Icon{
+                    width: 12px;
+                    height: 13px;
+                }
             }
-        }
-        &Link--medTxt{
-            font-weight: $wgt_ft-medium;
+            &Link--medTxt{
+                font-weight: $wgt_ft-medium;
+            }
         }
     }
 
