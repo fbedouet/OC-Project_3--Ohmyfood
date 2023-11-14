@@ -1,3 +1,28 @@
+@keyframes open-page {
+    0%{
+        transform: scaleX(0);
+    }
+
+    100%{
+        transform: scaleX(1); 
+    }
+}
+
+.anm{
+    @for $i from 1 to 4 {
+         &--#{$i} {
+             transform:scaleX(0);
+             animation: open-page forwards;
+             @if $i != 1 {
+                 animation-duration: 800ms / $i;
+                 animation-delay: 500ms * $i /3;
+             } @else  {
+                 animation-duration: 800ms;
+             }
+         }
+     } 
+ }
+
 .card{
     &Cover{
         position: relative;
@@ -10,6 +35,8 @@
             object-fit: cover;
         }
     }
+
+
 
     &Menu{
         z-index: 1;
@@ -34,8 +61,7 @@
         &__choice{
             display: grid;
             row-gap: 12px;
-            margin-top: 40px;
-            
+            margin-top: 40px; 
             &Dish{
                 background-color: $cl_bkg-white;
                 border-radius: 15px;
@@ -50,7 +76,6 @@
                     display: flex;
                     justify-content: space-between;
                 }
-
             }
         }
 

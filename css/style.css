@@ -423,6 +423,56 @@ body, main, footer {
   transition: opacity 250ms;
 }
 
+@-webkit-keyframes open-page {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes open-page {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+.anm--1 {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-animation: open-page forwards;
+          animation: open-page forwards;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+}
+.anm--2 {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-animation: open-page forwards;
+          animation: open-page forwards;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-delay: 333.3333333333ms;
+          animation-delay: 333.3333333333ms;
+}
+.anm--3 {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-animation: open-page forwards;
+          animation: open-page forwards;
+  -webkit-animation-duration: 266.6666666667ms;
+          animation-duration: 266.6666666667ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
 .cardCover {
   position: relative;
   height: 221px;
