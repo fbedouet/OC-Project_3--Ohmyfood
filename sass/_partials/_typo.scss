@@ -96,20 +96,20 @@
 
             &Dish{
 
-                &Title{
-                    @include ds_txt-var($ft-txt,$sz_ft-18px,$wgt_ft-medium); 
-                }
+                &Txt{
 
-                &Box{
+                    &Title{
+                        @include ds_txt-var($ft-txt,$sz_ft-18px,$wgt_ft-medium);
+                    }
+
                     &Obs{
                         @include ds_txt-var($ft-txt,$sz_ft-15px,$wgt_ft-light);
-                    }
-
-                    &Price {
-                        @include ds_txt-var($ft-txt,$sz_ft-15px,$wgt_ft-bold);
-                    }
+                    }  
                 }
 
+                &Price {
+                    @include ds_txt-var($ft-txt,$sz_ft-15px,$wgt_ft-bold);
+                }
             }
         }
 

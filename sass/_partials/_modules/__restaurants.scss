@@ -44,6 +44,8 @@
         border-radius:40px 40px 0px 0px;
         padding: 0px 13px;
         padding-bottom: 40px;
+        max-width: 1055px;
+        margin: auto;
 
         &__box {
             padding-top:40px;
@@ -61,22 +63,54 @@
         &__choice{
             display: grid;
             row-gap: 12px;
-            margin-top: 40px; 
-            &Dish{
-                background-color: $cl_bkg-white;
-                border-radius: 15px;
+            margin-top: 40px;
+            &Dish {
                 display: flex;
-                flex-direction: column;
-                height: 72px;
-                justify-content: center;
-                gap:5px;
-                padding:0 15px;
+                border-radius: 15px;
+                background-color: $cl_bkg-white;
+                overflow: hidden;
 
-                &Box{
-                    display: flex;
-                    justify-content: space-between;
+                &:hover > .cardMenu__choiceDishCheck{
+                    width: 60px;
                 }
-            }
+
+                &Txt{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    flex-grow: 1;
+                    height: 60px;
+                    padding-left: 15px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;              
+                }
+            
+                &Price{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-right: 15px;
+                    height: 60px;
+                    padding-left: 5px;
+                }
+            
+                &Check{
+                    display: flex;
+                    align-items: center;
+                    background-color: $clr-waterGreen;
+                    color: white;
+                    font-size: 20px;
+                    width: 0px;
+                    height: 60px;
+                    transition: all 250ms ease-in-out;
+                    &Icon {
+                        width: 60px;
+                        padding: 20px;
+                    }
+                }
+                
+             }
         }
 
         &__button{

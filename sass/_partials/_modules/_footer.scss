@@ -1,7 +1,7 @@
 .footer {    
     background-color: $cl_bg-footer;
     color: $cl_txt-button;
-    padding: 22px 19px;
+    padding: 22px 0;
     display: grid;
     @media (min-width: 1439px){
         display: flex;
@@ -16,11 +16,13 @@
 
     &__title{
         margin-bottom: 10px;
+        padding-left: 19px;
         @media (min-width: 1439px){
             margin-bottom: 0;
         }
     }
     &__box{
+        padding-left: 19px;
         @media (min-width: 1439px){
             display: flex;
             gap:45px;

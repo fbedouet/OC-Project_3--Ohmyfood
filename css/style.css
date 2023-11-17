@@ -109,17 +109,17 @@ body, main, footer {
   font-size: 1rem;
   font-weight: 300;
 }
-.cardMenu__choiceDishTitle {
+.cardMenu__choiceDishTxtTitle {
   font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
 }
-.cardMenu__choiceDishBoxObs {
+.cardMenu__choiceDishTxtObs {
   font-family: "Roboto", sans-serif;
   font-size: 0.94rem;
   font-weight: 300;
 }
-.cardMenu__choiceDishBoxPrice {
+.cardMenu__choiceDishPrice {
   font-family: "Roboto", sans-serif;
   font-size: 0.94rem;
   font-weight: 700;
@@ -491,6 +491,8 @@ body, main, footer {
   border-radius: 40px 40px 0px 0px;
   padding: 0px 13px;
   padding-bottom: 40px;
+  max-width: 1055px;
+  margin: auto;
 }
 .cardMenu__box {
   padding-top: 40px;
@@ -544,8 +546,17 @@ body, main, footer {
   margin-top: 40px;
 }
 .cardMenu__choiceDish {
-  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+}
+.cardMenu__choiceDish:hover > .cardMenu__choiceDishCheck {
+  width: 60px;
+}
+.cardMenu__choiceDishTxt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,20 +564,51 @@ body, main, footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 72px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5px;
-  padding: 0 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 60px;
+  padding-left: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.cardMenu__choiceDishBox {
+.cardMenu__choiceDishPrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 15px;
+  height: 60px;
+  padding-left: 5px;
+}
+.cardMenu__choiceDishCheck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99e2d0;
+  color: white;
+  font-size: 20px;
+  width: 0px;
+  height: 60px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+.cardMenu__choiceDishCheckIcon {
+  width: 60px;
+  padding: 20px;
 }
 .cardMenu__button {
   display: -webkit-box;
@@ -621,7 +663,7 @@ body, main, footer {
 .footer {
   background-color: #353535;
   color: #ffffff;
-  padding: 22px 19px;
+  padding: 22px 0;
   display: grid;
 }
 @media (min-width: 1439px) {
@@ -646,11 +688,15 @@ body, main, footer {
 }
 .footer__title {
   margin-bottom: 10px;
+  padding-left: 19px;
 }
 @media (min-width: 1439px) {
   .footer__title {
     margin-bottom: 0;
   }
+}
+.footer__box {
+  padding-left: 19px;
 }
 @media (min-width: 1439px) {
   .footer__box {
