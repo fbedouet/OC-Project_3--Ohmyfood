@@ -70,7 +70,7 @@
                 background-color: $cl_bkg-white;
                 overflow: hidden;
 
-                &:hover > .cardMenu__choiceDishCheck{
+                &:active > .cardMenu__choiceDishCheck{
                     width: 60px;
                 }
 
@@ -81,9 +81,13 @@
                     flex-grow: 1;
                     height: 60px;
                     padding-left: 15px;
-                    text-overflow: ellipsis;
                     overflow: hidden;
-                    white-space: nowrap;              
+
+                    &Obs , &Title{
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }             
                 }
             
                 &Price{

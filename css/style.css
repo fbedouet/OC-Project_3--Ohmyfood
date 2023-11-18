@@ -67,12 +67,12 @@ body, main, footer {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.how__box .howStepIndex {
+.how__boxStepIndex {
   font-family: "Roboto", sans-serif;
   font-size: 14.18px;
   font-weight: 500;
 }
-.how__box .howStepTxt {
+.how__boxStepTxt {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -553,7 +553,7 @@ body, main, footer {
   background-color: white;
   overflow: hidden;
 }
-.cardMenu__choiceDish:hover > .cardMenu__choiceDishCheck {
+.cardMenu__choiceDish:active > .cardMenu__choiceDishCheck {
   width: 60px;
 }
 .cardMenu__choiceDishTxt {
@@ -572,9 +572,12 @@ body, main, footer {
           flex-grow: 1;
   height: 60px;
   padding-left: 15px;
-  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cardMenu__choiceDishTxtObs, .cardMenu__choiceDishTxtTitle {
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .cardMenu__choiceDishPrice {
   display: -webkit-box;

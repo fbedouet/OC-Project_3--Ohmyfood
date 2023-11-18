@@ -48,8 +48,8 @@
 .how{
     &__title{
         @include ds_txt-title;
-    }
-    &__box
+        }
+    &__box {
         &Step {
             &Index{
                 @include ds_txt-var($ft-txt,14.18px,$wgt_ft-medium);    
@@ -58,6 +58,7 @@
                 @include ds_txt-howStep;
             }
         }
+    }
 }
 
 .restaurant {
