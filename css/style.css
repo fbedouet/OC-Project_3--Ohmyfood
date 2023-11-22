@@ -522,8 +522,8 @@ body, main, footer {
   border-radius: 15px 15px 0px 0px;
 }
 .restaurant__boxShopImg--pos1 {
-  -o-object-position: 0 100%;
-     object-position: 0 100%;
+  -o-object-position: 0 70%;
+     object-position: 0 70%;
 }
 .restaurant__boxShopImg--pos2 {
   -o-object-position: 0 60%;
