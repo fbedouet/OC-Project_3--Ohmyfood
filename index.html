@@ -13,89 +13,98 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="navbar">
-            <div class="navbar__goback"><img src="assets/logo/GoBack.svg" class="navbar__goback--displayoff"></div>
-            <p class="navbar__logo">ohmyfood</p>
-            <div class="navbar__goback"></div>
-        </header>
-        <main>
-            <div class="location"> <i class="fa-solid fa-location-dot location__icon"></i> <span class="location__city">Paris, Belleville</span> </div>
-            <section class="purpose">
-                <h1 class="purpose__title">Réservez le menu qui vous convient</h1>
-                <p class="purpose__txt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="#anchorRestaurants"><button class="purpose__button">Explorer nos restaurants</button></a>
-            </section>
-            <section class="how">
-                <h1 class="how__title">Fonctionnement</h1>
-                <div class="how__box">
-                    <div class="how__boxStep">
-                        <span class="how__boxStepIndex">1</span>
-                        <i class="fa-lg fa-solid fa-mobile-screen-button how__boxStepIcon"></i>
-                        <span class="how__boxStepTxt">Choisissez un restaurant</span>
+        <div class="spin__on">
+            <div class="spin__on--ext">
+                <img src="assets/logo/spin_ext.svg">
+            </div>
+            <div class="spin__on--int">
+                <img src="assets/logo/spin_int.svg">
+            </div>
+        </div>
+        <div class="spin__off">
+            <header class="navbar">
+                <div class="navbar__goback"><img src="assets/logo/GoBack.svg" class="navbar__goback--displayoff"></div>
+                <p class="navbar__logo">ohmyfood</p>
+                <div class="navbar__goback"></div>
+            </header>
+            <main>
+                <div class="location"> <i class="fa-solid fa-location-dot location__icon"></i> <span class="location__city">Paris, Belleville</span> </div>
+                <section class="purpose">
+                    <h1 class="purpose__title">Réservez le menu qui vous convient</h1>
+                    <p class="purpose__txt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <a href="#anchorRestaurants"><button class="purpose__button">Explorer nos restaurants</button></a>
+                </section>
+                <section class="how">
+                    <h1 class="how__title">Fonctionnement</h1>
+                    <div class="how__box">
+                        <div class="how__boxStep">
+                            <span class="how__boxStepIndex">1</span>
+                            <i class="fa-lg fa-solid fa-mobile-screen-button how__boxStepIcon"></i>
+                            <span class="how__boxStepTxt">Choisissez un restaurant</span>
+                        </div>
+                        <div class="how__boxStep">
+                            <span class="how__boxStepIndex">2</span>
+                            <i class="fa-solid fa-list-ul how__boxStepIcon"></i>
+                            <span class="how__boxStepTxt">Composez votre menu</span>
+                        </div>
+                        <div class="how__boxStep">
+                            <span class="how__boxStepIndex">3</span>
+                            <i class="fa-solid fa-store how__boxStepIcon"></i>
+                            <span class="how__boxStepTxt">Dégustez au restaurant</span>
+                        </div>
                     </div>
-                    <div class="how__boxStep">
-                        <span class="how__boxStepIndex">2</span>
-                        <i class="fa-solid fa-list-ul how__boxStepIcon"></i>
-                        <span class="how__boxStepTxt">Composez votre menu</span>
-                    </div>
-                    <div class="how__boxStep">
-                        <span class="how__boxStepIndex">3</span>
-                        <i class="fa-solid fa-store how__boxStepIcon"></i>
-                        <span class="how__boxStepTxt">Dégustez au restaurant</span>
-                    </div>
-                </div>
-            </section>
-            <section class="restaurant" id="anchorRestaurants">
-                <h1 class="restaurant__title">Restaurants</h1>
-                <article class="restaurant__box">
-                    <a href="restaurants/rest_lPdG.html" class="restaurant__boxShop">
-                        <img src="assets/img/jay-wennington-lPdG.jpg" class="restaurant__boxShopImg" alt="Assiette gastronomique avec saumon roquette friand"> 
-                        <span class="restaurant__boxShopNewtxt">Nouveau</span>
-                        <div class="restaurant__boxShopTxt">
-                            <h2 class="restaurant__boxShopTxtTitle">La palette du goût</h2>
-                            <p>Ménilmontant</p>
-                        </div>
-                        <div class="restaurant__boxShopLike">
-                            <div class="restaurant__boxShopLikeOff">
-                            </div> 
-                        </div>
-                    </a>
-                    <a href="restaurants/rest_lNE.html" class="restaurant__boxShop">
-                        <img src="assets/img/stil-lNE.jpg" class="restaurant__boxShopImg" alt="Assiette gourmande légumes">
-                        <div class="restaurant__boxShopTxt">
-                            <h2 class="restaurant__boxShopTxtTitle">La note enchantée</h2>
-                            <p>Charonne</p>
-                        </div>
-                        <div class="restaurant__boxShopLike">
-                            <div class="restaurant__boxShopLikeOff">
-                            </div> 
-                        </div>
-                    </a>
-                    <a href="restaurants/rest_alF.html" class="restaurant__boxShop">
-                        <img src="assets/img/toa-heftiba-alF.jpg" class="restaurant__boxShopImg" alt="Assiette toast salade oeuf poché sauce">
-                        <div class="restaurant__boxShopTxt">
-                            <h2 class="restaurant__boxShopTxtTitle">À la française</h2>
-                            <p>Cité Rouge</p>
-                        </div>
-                        <div class="restaurant__boxShopLike">
-                            <div class="restaurant__boxShopLikeOff">
-                            </div> 
-                        </div>
-                    </a>
-                    <a href="restaurants/rest_lDdS.html" class="restaurant__boxShop">
-                        <img src="assets/img/louis-hansel-shotsoflouis-lDdS.jpg" class="restaurant__boxShopImg" alt="Assiette rectangulaire poisson poivrons">
-                        <div class="restaurant__boxShopTxt">
-                            <h2 class="restaurant__boxShopTxtTitle">Le délice des sens</h2>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                        <div class="restaurant__boxShopLike">
-                            <div class="restaurant__boxShopLikeOff">
-                            </div> 
-                        </div>
-                    </a>
-                </article>
-            </section>
-        </main>
+                </section>
+                <section class="restaurant" id="anchorRestaurants">
+                    <h1 class="restaurant__title">Restaurants</h1>
+                    <article class="restaurant__box">
+                        <a href="restaurants/rest_lPdG.html" class="restaurant__boxShop">
+                            <img src="assets/img/jay-wennington-lPdG.jpg" class="restaurant__boxShopImg" alt="Assiette gastronomique avec saumon roquette friand"> 
+                            <span class="restaurant__boxShopNewtxt">Nouveau</span>
+                            <div class="restaurant__boxShopTxt">
+                                <h2 class="restaurant__boxShopTxtTitle">La palette du goût</h2>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div class="restaurant__boxShopLike">
+                                <div class="restaurant__boxShopLikeOff">
+                                </div> 
+                            </div>
+                        </a>
+                        <a href="restaurants/rest_lNE.html" class="restaurant__boxShop">
+                            <img src="assets/img/stil-lNE.jpg" class="restaurant__boxShopImg" alt="Assiette gourmande légumes">
+                            <div class="restaurant__boxShopTxt">
+                                <h2 class="restaurant__boxShopTxtTitle">La note enchantée</h2>
+                                <p>Charonne</p>
+                            </div>
+                            <div class="restaurant__boxShopLike">
+                                <div class="restaurant__boxShopLikeOff">
+                                </div> 
+                            </div>
+                        </a>
+                        <a href="restaurants/rest_alF.html" class="restaurant__boxShop">
+                            <img src="assets/img/toa-heftiba-alF.jpg" class="restaurant__boxShopImg" alt="Assiette toast salade oeuf poché sauce">
+                            <div class="restaurant__boxShopTxt">
+                                <h2 class="restaurant__boxShopTxtTitle">À la française</h2>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <div class="restaurant__boxShopLike">
+                                <div class="restaurant__boxShopLikeOff">
+                                </div> 
+                            </div>
+                        </a>
+                        <a href="restaurants/rest_lDdS.html" class="restaurant__boxShop">
+                            <img src="assets/img/louis-hansel-shotsoflouis-lDdS.jpg" class="restaurant__boxShopImg" alt="Assiette rectangulaire poisson poivrons">
+                            <div class="restaurant__boxShopTxt">
+                                <h2 class="restaurant__boxShopTxtTitle">Le délice des sens</h2>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <div class="restaurant__boxShopLike">
+                                <div class="restaurant__boxShopLikeOff">
+                                </div> 
+                            </div>
+                        </a>
+                    </article>
+                </section>
+            </main>
             <footer class="footer">
                 <div class="footer__title">ohmyfood</div>
                 <div class="footer__box">
@@ -109,5 +118,6 @@
                     </div>
                 </div>
             </footer>
+        </div>
     </body>
 </html>

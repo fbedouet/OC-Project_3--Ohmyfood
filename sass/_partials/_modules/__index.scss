@@ -1,4 +1,70 @@
 
+@keyframes spinner {
+    0% {
+      transform: rotate(0);
+    }
+  
+    10% {
+      transform: rotate(0);
+    }
+  
+    90% {
+      transform: rotate(1turn);
+    }
+  
+    100% {
+      transform:rotate(1turn);
+
+    }
+  }
+
+  $ht:375px;
+  .spin {
+
+    &__on {    
+        position: relative;
+        display: flex;
+        justify-content: center;
+        
+        &--ext , &--int{
+            animation: spinner 2s ease-in-out;      
+            position: absolute;
+            transform-origin: center;
+            z-index: -1;
+            & > img {
+                width: $ht;
+                height: $ht;
+            } 
+        }
+
+        &--ext{
+            animation-direction: reverse;
+        }
+
+    }
+  }
+
+
+@keyframes mainOff {
+    89%{
+        transform: scaleX(1);
+    }
+    90% {
+        opacity: 0;
+        transform: scaleX(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+.spin__off{
+    animation: mainOff 1s 2s ease-in-out forwards;
+    transform: scaleX(0);
+    opacity: 0;
+}
+
+
 .location{
     display: flex;
     height: 50px;
@@ -40,11 +106,13 @@
     flex-direction: column;
     gap: 25px;
     padding:48px 19px;
+    background-color: $cl_txt-button;
     @media (min-width: 1440px){
         padding-left: 180px;
     }
 
     &__box{
+        
         display: flex;
         flex-direction: column;
         gap:25px;
