@@ -26,6 +26,8 @@
 
 //design system button
 @mixin ds_button {
+    display: flex;
+    align-items: center;
     height: 50px;
     border-radius: 25px;
     border-style: none;
@@ -36,6 +38,10 @@
 
     position: relative;
     z-index: 1;
+
+    &:visited{
+        color: $cl_txt-button;
+    }
 
     &:hover{
         cursor: pointer;

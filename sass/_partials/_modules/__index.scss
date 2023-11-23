@@ -14,63 +14,58 @@
   
     100% {
       transform:rotate(1turn);
-
     }
   }
 
-  $ht:375px;
-  .spin {
-
-    &__on {    
-        position: relative;
-        display: flex;
-        justify-content: center;
-        
-        &--ext , &--int{
-            animation: spinner 2s ease-in-out;      
-            position: absolute;
-            transform-origin: center;
-            z-index: -1;
-            & > img {
-                width: $ht;
-                height: $ht;
-            } 
-        }
-
-        &--ext{
-            animation-direction: reverse;
-        }
-
+@keyframes loaderOut {
+    0%{
+        opacity: 1;
+        transform: scaleX(1); 
     }
-  }
-
-
-@keyframes mainOff {
-    89%{
-        transform: scaleX(1);
-    }
-    90% {
-        opacity: 0;
-        transform: scaleX(1);
+    99% {
+         opacity: 0;
+         transform: scaleX(1);
     }
     100% {
-        opacity: 1;
-        transform: scaleX(1);
+         opacity: 0;
+         transform: scale(0);
     }
 }
-.spin__off{
-    animation: mainOff 1s 2s ease-in-out forwards;
-    transform: scaleX(0);
-    opacity: 0;
-}
 
+.loader {    
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loaderOut 250ms 2750ms ease-in-out forwards;
+    
+    &--spinExt , &--spinInt{
+        animation: spinner 2750ms ease-in-out;      
+        position: absolute;
+        transform-origin: center;
+        & > img {
+            width: $ht;
+            height: $ht;
+        } 
+    }
+
+    &--spinExt{
+        animation-direction: reverse;
+    }
+
+}
 
 .location{
     display: flex;
     height: 50px;
     justify-content: center;
     align-items: center;
-    padding: auto;
     background-color: $cl_bkg-txt_location;
 
     &__icon{
@@ -185,6 +180,7 @@
             grid-template-areas: "img img"
                                  "txt like";
             position: relative;
+
             &Img{
                 grid-area: img;
                 width: 100%;
@@ -198,6 +194,7 @@
                     object-position: 0 60%;   
                 }
             }
+
             &Newtxt{
                 position: absolute;
                 right: 12px;
