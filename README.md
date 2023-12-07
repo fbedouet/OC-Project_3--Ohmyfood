@@ -1,5 +1,9 @@
-#OC-Project_2: Make a web page more dynamic with animations \r
-#Project name: Ohmyfood \r
-#project objective: Web application for creating gourmet menus \r
+#OC-Project_2: Make a web page more dynamic with animations
 
-#Github page: https://fbedouet.github.io/OC-Project_3--Ohmyfood/ \r
+#Project name: Ohmyfood
+
+#project objective: Web application for creating gourmet menus
+
+#Github page: https://fbedouet.github.io/OC-Project_3--Ohmyfood/
+
+#Project status: Closed
